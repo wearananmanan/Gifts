@@ -3,9 +3,8 @@
 // ============================================================
 
 // ---- demo order data (swap for real values from your backend) ----
-var GIFT_VALUE = 2500;
-var GIFT_CODE = 'AM-' + Math.random().toString(36).slice(2, 6).toUpperCase()
-              + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+var GIFT_VALUE = 5000;
+var GIFT_CODE = 'AM360-ThankYou-01';
 
 document.getElementById('gcCode').textContent = GIFT_CODE;
 

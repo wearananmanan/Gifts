@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANANMANAN — Thank You Gift Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Syncopate:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- boot / intro sequence -->
+<div id="intro">
+  <div class="intro-mark" id="introMark"></div>
+  <div class="intro-sub">Gift Card Protocol</div>
+  <div class="intro-bar"><div class="intro-bar-fill" id="introFill"></div></div>
+  <div class="intro-pct" id="introPct">0%</div>
+</div>
+
+<!-- background layers -->
+<div class="grid-field"></div>
+<div class="glow-orb orb-a"></div>
+<div class="glow-orb orb-b"></div>
+<canvas id="particles"></canvas>
+<canvas id="confetti"></canvas>
+
+<main>
+  <div class="kicker">Order Confirmed</div>
+  <h1>You've Got a Gift Card</h1>
+  <p class="sub">
+    Thank you for your order — as a token of appreciation, ANANMANAN has loaded
+    a gift card straight to your account. Tap the card to reveal your code.
+  </p>
+
+  <div class="stage">
+    <div class="card" id="giftCard">
+      <div class="face face-front">
+        <div class="card-top">
+          <div class="brand">ANAN<span>MANAN</span></div>
+          <div class="chip-icon"></div>
+        </div>
+        <div class="card-mid">
+          <div class="gc-label">Gift Card Value</div>
+          <div class="gc-value" id="gcValue">Rs. 0</div>
+        </div>
+        <div class="card-bottom">
+          <div class="gc-code">THANK YOU GIFT</div>
+          <div class="gc-tap">tap to flip ↻</div>
+        </div>
+      </div>
+      <div class="face face-back">
+        <div class="card-top">
+          <div class="brand">ANAN<span>MANAN</span></div>
+          <div class="expiry">Valid 12 months</div>
+        </div>
+        <div class="card-mid">
+          <div class="qr"></div>
+          <p class="redeem-note">Enter this code at checkout on ananmanan.store to redeem your balance</p>
+        </div>
+        <div class="card-bottom" style="width:100%; justify-content:center;">
+          <div class="gc-code" id="gcCode">AM-XXXX-XXXX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-hint">Tap or click the card &middot; <b>reveal your redeem code</b></div>
+
+  <div class="actions">
+    <button class="btn solid" id="copyCodeBtn">Copy gift code</button>
+    <a class="btn" href="https://ananmanan.store" target="_blank" rel="noopener">Shop now</a>
+  </div>
+
+  <footer>
+    A confirmation has also been sent to your inbox &middot;
+    <a href="https://ananmanan.store" target="_blank" rel="noopener">ananmanan.store</a>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
